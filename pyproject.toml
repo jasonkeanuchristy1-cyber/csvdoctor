@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csvdoctor"
+dynamic = ["version"]
+description = "Diagnose and repair messy CSV files: encodings, delimiters, ragged rows, Excel damage and more. Zero dependencies."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "csvdoctor contributors" }]
+keywords = ["csv", "data-cleaning", "data-quality", "encoding", "excel", "etl", "cli", "linter"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+    "Topic :: Text Processing :: General",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.5", "build", "twine"]
+
+[project.urls]
+Homepage = "https://github.com/jasonkeanuchristy1-cyber/csvdoctor"
+Issues = "https://github.com/jasonkeanuchristy1-cyber/csvdoctor/issues"
+Changelog = "https://github.com/jasonkeanuchristy1-cyber/csvdoctor/blob/main/CHANGELOG.md"
+
+[project.scripts]
+csvdoctor = "csvdoctor.cli:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "csvdoctor.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+csvdoctor = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B"]

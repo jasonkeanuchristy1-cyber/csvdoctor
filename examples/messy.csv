@@ -1,0 +1,11 @@
+ID;Customer;Email;Signup Date;Amount;City;Notes;Email
+1.23457E+11;  Ana Lopez ;ana@example.com;2024-01-15;1250.50;Madrid;;ana@example.com
+1.23457E+11;José García;jose@example.com;15/01/2024;980;Málaga;;jose@example.com
+100000000003;CafÃ© Central;cafe@example.com;2024-02-03;N/A;Sevilla;;cafe@example.com
+
+100000000004;Li Wei;li@example.com;03/02/2024;12o;Bilbao;;li@example.com
+100000000005;Sam Ortiz;sam@example.com;2024-03-09;455.00;Vigo
+100000000006;Dee Park;dee@example.com;2024-03-11;300;León;;dee@example.com;leftover
+100000000007;=HYPERLINK("http://evil.example","Click me");x@example.com;2024-03-12;75;Cadiz;;x@example.com
+100000000008;Mia Rossi;mia@example.com;2024-03-14;610.25;Murcia;;mia@example.com
+1.23457E+11;  Ana Lopez ;ana@example.com;2024-01-15;1250.50;Madrid;;ana@example.com
